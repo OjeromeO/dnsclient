@@ -1,0 +1,74 @@
+
+*******************************************
+*               dnsclient                 *
+*                                         *
+*  The next-gen DNS client (version 1.0)  *
+*                                         *
+*******************************************
+
+CONTENU
+-------
+  License
+  Introduction
+  Compilation
+  Documentation
+  How to use
+
+
+LICENSE
+-------
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of
+the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details at
+http://www.gnu.org/copyleft/gpl.html
+
+
+INTRODUCTION
+------------
+The dnsclient program allows for hostname resolution into IP address
+and vice versa. The user can choose the transport protocol.
+
+
+COMPILATION
+-----------
+
+To compile dnsclient :
+
+    - make
+
+To clean the directory, object files only :
+
+    - make clean
+
+To clean the directory, binary and object files :
+
+    - make mrproper
+
+
+DOCUMENTATION
+-------------
+
+Doxygen doc can be generated with the Makefile, using the existent "Doxyfile"
+file that can be edited by the user ; it will be output in "doc" directory :
+
+    - make doxydoc
+
+
+HOW TO USE
+----------
+ - To resolve a hostname :
+        ./dnsclient HOSTNAME
+
+ - To resolve an IP address :
+        ./dnsclient ADRESS
+
+ - You can tell dnsclient which transport protocol to use to resolve a target
+ with "-p" option (available values are "udp", which is the default, and "tcp") :
+        ./dnsclient -p PROTOCOL TARGET
+
